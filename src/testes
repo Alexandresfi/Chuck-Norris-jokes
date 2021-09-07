@@ -1,0 +1,61 @@
+// import React, {useState } from "react";
+// import './App.css';
+// import api from './services/api';
+
+// function App() {
+
+//   const [number, Setnumber] = useState("")
+
+//   const [joke, SetJoke] = useState([{}])
+
+//   function numberJoke (event) {
+//     let n = event.target.value;
+//     Setnumber(n);
+//   }
+
+
+//   const fetchData = async ()=>{
+//     const jokes = await  api.get(`http://api.icndb.com/jokes/random/${number}`)
+//     SetJoke( jokes.data.value);
+//     console.log(joke)
+
+//     joke.map(item=> console.log(item.joke))
+//     console.log(JSON.stringify(jokes.data.value))
+//   }
+
+//   function jokes (){
+//     if(number){
+//       fetchData()   
+//     }else{
+//       alert("Informe o número de piada");
+//     }
+//   }
+
+//   return (
+  
+//     <div className="container d-flex flex-column w-50 mb-4">     
+//       <h1>Welcome to Chuck Norris' jokes page</h1>
+
+//       <label>
+//         Inform the number of jokes you want:
+//         <input type="number" name="quantidade de piadas" onChange={numberJoke}/>
+//       </label>
+//       <label>
+//         Choose the category:
+//         <select className="form-select form-select-lg mb-3 w-25 p-1">
+//           <option value="random">random</option>
+//           <option value="nerdy">nerdy</option>
+//           <option value="explicit">explicit</option>
+//         </select>
+//       </label>
+//       <input type="submit" onClick={jokes} className="btn btn-primary w-25"/>
+
+//      <ul>
+//       {joke.map((item,index)=>(<li key={index}>{JSON.stringify(item.joke)}</li>))}
+//      </ul>
+
+//     </div>
+//   );
+// }
+
+// export default App;
