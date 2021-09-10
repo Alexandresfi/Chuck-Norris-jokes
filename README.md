@@ -12,5 +12,3 @@
     <li> Axios</li>
     <li> Styled-components</li>
 </ul>
-
-<a href=" ">Link para acesso</a>
