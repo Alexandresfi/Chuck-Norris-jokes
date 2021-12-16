@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import './App.css';
 import api from './services/api';
-import Stylestart from "./styled/Stylestart"
+import { Button, Container, Input, Main, Ul } from './styled/Stylestart'
+
 
 function App() {
 
@@ -29,24 +30,25 @@ function App() {
 
   return (
 
-    <Stylestart>
-      <div className="container">     
+    <Main>
+      <Container>     
 
         <h1>Welcome to Chuck Norris' jokes page</h1>
 
-        <label>
+        <p>
           Inform the number of jokes you want:
-          <input type="number" name="quantidade de piadas" onChange={numberJoke} placeholder="number of jokes"/>
-        </label>
+        </p>
 
-        <button onClick={jokes}>Enviar</button>
+          <Input type='number' name="quantidade de piadas" onChange={numberJoke} placeholder="Number Jokes"/>
 
-        <ul>
+        <Button onClick={jokes}>Enviar</Button>
+
+        <Ul>
             {joke.map((item,index)=>(<li key={index}>{JSON.stringify(item.joke).replace(/[`&<;>""]/g, '')}</li>))}
-        </ul>
+        </Ul>
 
-      </div>
-    </Stylestart>
+      </Container>
+      </Main>
 
     
   );
